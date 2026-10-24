@@ -88,6 +88,10 @@ class Settings(BaseSettings):
     @field_validator("database_url")
     @classmethod
     def require_supported_database(cls, value: str) -> str:
+        if value.startswith("postgresql://"):
+            return value.replace("postgresql://", "postgresql+psycopg://", 1)
+        if value.startswith("postgres://"):
+            return value.replace("postgres://", "postgresql+psycopg://", 1)
         if not value.startswith(("sqlite:///", "postgresql+psycopg://")):
             raise ValueError("The database URL must use SQLite or PostgreSQL with psycopg.")
         return value
