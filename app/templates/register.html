@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f9ff">
+  <title>Create account — TrustVault</title>
+  <link rel="stylesheet" href="../static/css/trustvault.css">
+  <script src="../static/js/trustvault.js" defer></script>
+</head>
+<body class="login-page" data-auth-redirect>
+  <header class="login-header">
+    <a class="brand" href="landing.html" aria-label="TrustVault home">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2.8 27 7v8.2c0 7.1-4.6 11.5-11 14-6.4-2.5-11-6.9-11-14V7l11-4.2Z" fill="currentColor"/><path d="m11.1 15.6 3.2 3.2 6.9-7.2" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/></svg>
+      <span>Trust<span class="brand-accent">Vault</span></span>
+    </a>
+    <a class="login-back-link" href="landing.html"><span aria-hidden="true">←</span> Back to home</a>
+    <nav class="login-page-nav" aria-label="Public navigation">
+      <a href="landing.html" data-public-only>Home</a>
+      <a href="login.html" data-public-only>Sign in</a>
+    </nav>
+  </header>
+  <main class="login-main">
+    <section class="login-card" aria-labelledby="register-title">
+      <div class="login-art-panel">
+        <div class="login-art-brand"><span class="login-shield"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2.8 27 7v8.2c0 7.1-4.6 11.5-11 14-6.4-2.5-11-6.9-11-14V7l11-4.2Z"/><path d="m11.1 15.6 3.2 3.2 6.9-7.2"/></svg></span><span><strong>Your files, in good hands.</strong><small>A thoughtful home for important documents.</small></span></div>
+        <div class="login-document-art" role="img" aria-label="Protected document illustration"><div class="login-doc-sheet"><i></i><i></i><i></i><i></i></div><span class="login-doc-shield"><svg viewBox="0 0 32 36" aria-hidden="true"><path d="M16 2 28 7v9c0 8-5 13-12 17C9 29 4 24 4 16V7L16 2Z"/><rect x="11" y="15" width="10" height="9" rx="1.5"/><path d="M13 15v-3a3 3 0 0 1 6 0v3"/></svg></span><span class="login-art-spark spark-one">✦</span><span class="login-art-spark spark-two">✧</span></div>
+        <p class="login-art-caption">Secure. Manage. Control.</p>
+      </div>
+      <div class="login-form-panel">
+        <div class="login-form-heading"><span class="eyebrow"><span class="eyebrow-dot"></span> Create your secure vault</span><h1 id="register-title">Create account</h1><p>Set up your TrustVault account to get started.</p></div>
+        <form class="auth-form" data-api-register>
+          <label class="form-label" for="register-name">Display name <span>(optional)</span></label>
+          <div class="input-with-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M5 21a7 7 0 0 1 14 0"/></svg><input id="register-name" name="display_name" type="text" autocomplete="name" placeholder="Your name" maxlength="100"></div>
+          <label class="form-label" for="register-email">Email address</label>
+          <div class="input-with-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><input id="register-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" maxlength="254" required></div>
+          <div class="password-label-row"><label class="form-label" for="register-password">Password</label></div>
+          <div class="input-with-icon password-input-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><input id="register-password" name="password" type="password" autocomplete="new-password" placeholder="At least 12 characters" minlength="12" maxlength="128" required><button class="password-toggle" type="button" aria-label="Show password" aria-pressed="false" data-password-toggle><svg class="eye-open" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6Z"/><circle cx="12" cy="12" r="3"/></svg><svg class="eye-closed" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 3 18 18M10.6 6.2A10 10 0 0 1 12 6c6.5 0 10 6 10 6a16 16 0 0 1-3 3.5M6.2 6.2C3.5 8 2 12 2 12s3.5 6 10 6a10 10 0 0 0 4-.8M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg></button></div>
+          <div class="password-label-row"><label class="form-label" for="register-confirm-password">Confirm password</label></div>
+          <div class="input-with-icon password-input-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><input id="register-confirm-password" name="confirm_password" type="password" autocomplete="new-password" placeholder="Re-enter your password" minlength="12" maxlength="128" required><button class="password-toggle" type="button" aria-label="Show password" aria-pressed="false" data-password-toggle><svg class="eye-open" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6Z"/><circle cx="12" cy="12" r="3"/></svg><svg class="eye-closed" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 3 18 18M10.6 6.2A10 10 0 0 1 12 6c6.5 0 10 6 10 6a16 16 0 0 1-3 3.5M6.2 6.2C3.5 8 2 12 2 12s3.5 6 10 6a10 10 0 0 0 4-.8M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg></button></div>
+          <button class="button button-primary login-submit" type="submit">Create account <span aria-hidden="true">→</span></button>
+          <p class="preview-notice" role="status" aria-live="polite" data-register-status></p>
+        </form>
+        <p class="login-signup">Already have an account? <a href="login.html">Sign in</a></p>
+      </div>
+    </section>
+    <p class="login-privacy"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 20 6v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-3Z"/><path d="m9 12 2 2 4-4"/></svg> Your privacy matters. Your documents stay yours.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f9ff">
+  <meta name="description" content="TrustVault keeps your important documents organized, protected, and under your control.">
+  <title>TrustVault — Your documents. Your control.</title>
+  <link rel="stylesheet" href="../static/css/trustvault.css">
+  <script src="../static/js/trustvault.js" defer></script>
+</head>
+<body class="landing-page">
+  <header class="landing-header">
+    <a class="brand" href="landing.html" aria-label="TrustVault home">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M16 2.8 27 7v8.2c0 7.1-4.6 11.5-11 14-6.4-2.5-11-6.9-11-14V7l11-4.2Z" fill="currentColor"/>
+        <path d="m11.1 15.6 3.2 3.2 6.9-7.2" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+      </svg>
+      <span>Trust<span class="brand-accent">Vault</span></span>
+    </a>
+    <button class="icon-button landing-menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="landing-nav">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="landing-nav" id="landing-nav" aria-label="Main navigation">
+      <a href="landing.html" aria-current="page">Home</a>
+      <a href="dashboard.html" data-authenticated-only hidden>Dashboard</a>
+      <a href="documents.html" data-authenticated-only hidden>Documents</a>
+      <a href="audit.html" data-authenticated-only hidden>Audit</a>
+      <a href="settings.html" data-authenticated-only hidden>Profile &amp; Settings</a>
+      <a href="admin.html" data-authenticated-only data-admin-only hidden>Admin dashboard</a>
+      <a href="#features">Features</a>
+      <a href="#security">Security</a>
+      <a href="#about">About</a>
+      <a class="landing-login" href="login.html" data-public-only>Login</a>
+      <a class="button button-primary button-small" href="register.html" data-public-only>Create account <span aria-hidden="true">→</span></a>
+      <a class="landing-login" href="login.html" data-authenticated-only data-logout hidden>Sign out</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="about">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> Secure. Manage. Control.</span>
+        <h1>Your documents.<br>Your control.<br><span>TrustVault.</span></h1>
+        <p class="hero-description">A calmer, more secure place for the files that matter. Keep your documents organized, share them with confidence, and stay in control of every detail.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="login.html">Explore your vault <span aria-hidden="true">→</span></a>
+          <a class="button button-secondary" href="#features">Discover TrustVault</a>
+        </div>
+        <div class="hero-proof">
+          <div class="avatar-stack" aria-hidden="true"><span>J</span><span>M</span><span>A</span></div>
+          <p><strong>Made for peace of mind</strong><br><span>Thoughtful protection for your important files</span></p>
+        </div>
+      </div>
+
+      <div class="hero-visual" id="security" role="img" aria-label="Illustration of a protected document folder">
+        <div class="visual-orbit orbit-one"></div>
+        <div class="visual-orbit orbit-two"></div>
+        <span class="float-icon float-file" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M13 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10z"/><path d="M13 3v7h7M8 14h8M8 17h6"/></svg>
+        </span>
+        <span class="float-icon float-cloud" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M7.5 18h10a4 4 0 0 0 .6-8A6.5 6.5 0 0 0 5.5 9a4.5 4.5 0 0 0 2 9Z"/></svg>
+        </span>
+        <span class="float-icon float-users" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M16 20v-1.5a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4V20M10 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7ZM16 4.2a3.5 3.5 0 0 1 0 6.7M18 14.7a4 4 0 0 1 2 3.5V20"/></svg>
+        </span>
+        <span class="float-icon float-check" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg>
+        </span>
+        <div class="folder-art" aria-hidden="true">
+          <div class="folder-back"></div>
+          <div class="folder-paper"><span></span><span></span><span></span><i></i></div>
+          <div class="folder-front"></div>
+          <div class="vault-shield">
+            <svg viewBox="0 0 48 56"><path d="M24 3 42 10v13c0 12-7.5 20-18 26C13.5 43 6 35 6 23V10L24 3Z"/><rect x="17" y="23" width="14" height="12" rx="2"/><path d="M20 23v-4a4 4 0 0 1 8 0v4m-4 5v3"/></svg>
+          </div>
+        </div>
+        <div class="visual-caption"><span class="caption-check">✓</span><span><strong>Your files, protected</strong><small>Private by design</small></span></div>
+      </div>
+    </section>
+
+    <section class="trust-strip section-wrap" aria-label="TrustVault highlights">
+      <div><span class="trust-icon"><svg viewBox="0 0 24 24"><path d="M12 3 20 6v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-3Z"/><path d="m9 12 2 2 4-4"/></svg></span><span><strong>Private by design</strong><small>Your files stay yours</small></span></div>
+      <div><span class="trust-icon"><svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 5v2"/></svg></span><span><strong>Secure sharing</strong><small>Share on your terms</small></span></div>
+      <div><span class="trust-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span><strong>Clear activity</strong><small>Know what happens</small></span></div>
+      <div><span class="trust-icon"><svg viewBox="0 0 24 24"><path d="M4 18V6m0 12h16M8 14l3-3 3 2 5-6"/></svg></span><span><strong>Easy to manage</strong><small>Everything in one place</small></span></div>
+    </section>
+
+    <section class="features-section section-wrap" id="features">
+      <div class="section-heading">
+        <span class="eyebrow">A better way to manage files</span>
+        <h2>Confidence in every document.</h2>
+        <p>Simple tools that put your important files and the way you share them in your hands.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <span class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 3 20 6v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-3Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <h3>Protection you can feel</h3><p>Keep sensitive documents in a space designed around privacy and care.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon feature-icon-sky"><svg viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></span>
+          <h3>Everything in its place</h3><p>Find the document you need with a clear, organized view of your files.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon feature-icon-lilac"><svg viewBox="0 0 24 24"><path d="M16 20v-1.5a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4V20M10 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7ZM17 8h5m-2.5-2.5v5"/></svg></span>
+          <h3>Sharing on your terms</h3><p>Choose who can access a document and keep permissions easy to understand.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="landing-footer section-wrap">
+    <a class="brand" href="landing.html">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2.8 27 7v8.2c0 7.1-4.6 11.5-11 14-6.4-2.5-11-6.9-11-14V7l11-4.2Z" fill="currentColor"/><path d="m11.1 15.6 3.2 3.2 6.9-7.2" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/></svg>
+      <span>Trust<span class="brand-accent">Vault</span></span>
+    </a>
+    <span>Secure. Manage. Control.</span>
+  </footer>
+</body>
+</html>

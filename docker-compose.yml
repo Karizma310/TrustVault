@@ -1,0 +1,35 @@
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: trustvault
+      POSTGRES_USER: trustvault
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    volumes:
+      - database_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U trustvault -d trustvault"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  app:
+    build: .
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      TRUSTVAULT_DATABASE_URL: postgresql+psycopg://trustvault:${POSTGRES_PASSWORD}@db:5432/trustvault
+      TRUSTVAULT_UPLOAD_DIR: /app/private_uploads
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - private_documents:/app/private_uploads
+
+volumes:
+  database_data:
+  private_documents:

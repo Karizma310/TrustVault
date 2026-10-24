@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f9ff">
+  <title>Admin Dashboard — TrustVault</title>
+  <link rel="stylesheet" href="../static/css/trustvault.css">
+  <script src="../static/js/trustvault.js" defer></script>
+</head>
+<body class="dashboard-page">
+  <div class="dashboard-layout" data-admin-dashboard data-authenticated-page data-admin-page hidden>
+    <aside class="sidebar" id="dashboard-sidebar">
+      <a class="brand sidebar-brand" href="landing.html" aria-label="TrustVault home">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2.8 27 7v8.2c0 7.1-4.6 11.5-11 14-6.4-2.5-11-6.9-11-14V7l11-4.2Z" fill="currentColor"/><path d="m11.1 15.6 3.2 3.2 6.9-7.2" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/></svg>
+        <span>Trust<span class="brand-accent">Vault</span></span>
+      </a>
+      <div class="sidebar-label">ADMINISTRATION</div>
+      <nav class="side-nav" aria-label="Admin navigation">
+        <a class="side-nav-link" href="dashboard.html">Workspace</a>
+        <a class="side-nav-link active" href="admin.html" aria-current="page">Admin dashboard</a>
+        <a class="side-nav-link" href="audit.html">Audit logs</a>
+        <a class="side-nav-link" href="settings.html">Settings</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <a class="profile-button" href="login.html" data-logout>
+          <span class="profile-avatar">↪</span>
+          <span class="profile-copy"><strong>Sign out</strong><small>End this session</small></span>
+        </a>
+      </div>
+    </aside>
+    <div class="sidebar-backdrop" data-sidebar-close></div>
+    <div class="dashboard-content">
+      <header class="dashboard-topbar">
+        <button class="icon-button sidebar-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="dashboard-sidebar">
+          <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+        <div class="topbar-actions">
+          <a class="profile-button topbar-profile" href="login.html">
+            <span class="profile-avatar">TV</span>
+            <span class="profile-copy"><strong data-user-email>Admin</strong><small>Administrator</small></span>
+          </a>
+        </div>
+      </header>
+      <main class="dashboard-main screen-main">
+        <div class="dashboard-heading screen-heading">
+          <div>
+            <div class="breadcrumb"><a href="dashboard.html">Workspace</a><span>/</span><strong>Admin</strong></div>
+            <h1>Admin dashboard</h1>
+            <p>Review registered accounts and authentication activity.</p>
+          </div>
+        </div>
+        <p class="screen-disclaimer" role="status" aria-live="polite" data-admin-status>Checking administrator access…</p>
+        <section class="panel files-panel" aria-labelledby="admin-users-title">
+          <div class="panel-heading files-panel-heading">
+            <div><h2 id="admin-users-title">Registered users <span class="count-pill" data-admin-user-count>—</span></h2><p>Account email, role, and registration time.</p></div>
+            <label class="table-search"><input type="search" placeholder="Search registered users" aria-label="Search registered users" data-admin-user-search></label>
+          </div>
+          <div class="table-scroll">
+            <table class="documents-table">
+              <thead><tr><th>Name</th><th>Email</th><th>Role</th><th>Registered</th></tr></thead>
+              <tbody data-admin-users><tr><td colspan="4">Loading users…</td></tr></tbody>
+            </table>
+          </div>
+        </section>
+        <section class="panel files-panel" aria-labelledby="admin-logins-title">
+          <div class="panel-heading files-panel-heading">
+            <div><h2 id="admin-logins-title">Login activity <span class="count-pill" data-admin-login-count>—</span></h2><p>Successful, failed, and explicitly requested sign-outs. Passwords and tokens are never logged.</p></div>
+            <label class="table-search"><input type="search" placeholder="Search login activity" aria-label="Search login activity" data-admin-login-search></label>
+          </div>
+          <div class="table-scroll">
+            <table class="documents-table">
+              <thead><tr><th>Email / identifier</th><th>Outcome</th><th>Method</th><th>Time</th></tr></thead>
+              <tbody data-admin-login-activity><tr><td colspan="4">Loading login activity…</td></tr></tbody>
+            </table>
+          </div>
+        </section>
+        <footer class="dashboard-footer"><span>TrustVault administration</span><span>Private account activity</span><a href="dashboard.html">Back to workspace</a></footer>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

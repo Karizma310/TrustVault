@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f9ff">
+  <title>My Documents — TrustVault</title>
+  <link rel="stylesheet" href="../static/css/trustvault.css">
+  <script src="../static/js/trustvault.js" defer></script>
+</head>
+<body class="dashboard-page">
+  <div class="dashboard-layout" data-authenticated-page hidden>
+    <aside class="sidebar" id="dashboard-sidebar">
+      <a class="brand sidebar-brand" href="landing.html" aria-label="TrustVault home"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2.8 27 7v8.2c0 7.1-4.6 11.5-11 14-6.4-2.5-11-6.9-11-14V7l11-4.2Z" fill="currentColor"/><path d="m11.1 15.6 3.2 3.2 6.9-7.2" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/></svg><span>Trust<span class="brand-accent">Vault</span></span></a>
+      <div class="sidebar-label">WORKSPACE</div>
+      <nav class="side-nav" aria-label="Workspace navigation">
+        <a class="side-nav-link" href="landing.html"><svg viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-6v-7h-4v7H4a1 1 0 0 1-1-1V10Z"/></svg><span>Home</span></a>
+        <a class="side-nav-link" href="dashboard.html"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="5" rx="2"/><rect x="13" y="10" width="8" height="11" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/></svg><span>Dashboard</span></a>
+        <a class="side-nav-link active" href="documents.html" aria-current="page"><svg viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg><span>My Documents</span></a>
+        <a class="side-nav-link" href="shared.html"><svg viewBox="0 0 24 24"><path d="M16 20v-1.5a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4V20M10 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"/></svg><span>Shared With Me</span></a>
+        <a class="side-nav-link" href="#upload-panel"><svg viewBox="0 0 24 24"><path d="M12 3 20 6v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-3Z"/><path d="M12 8v8m-4-4h8"/></svg><span>Upload Document</span></a>
+        <a class="side-nav-link" href="permissions.html"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20v-1a6 6 0 0 1 12 0v1M16 11h5"/></svg><span>Permissions</span></a>
+        <a class="side-nav-link" href="audit.html"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Audit Logs</span></a>
+      </nav>
+      <div class="sidebar-label sidebar-label-lower">PREFERENCES</div>
+      <nav class="side-nav" aria-label="Account navigation"><a class="side-nav-link" href="settings.html"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19 15a2 2 0 0 0 .3 2l-2 3a2 2 0 0 0-2-.1H9a2 2 0 0 0-2 .1l-2-3a2 2 0 0 0 .3-2v-6A2 2 0 0 0 5 7l2-3a2 2 0 0 0 2 .1h6a2 2 0 0 0 2-.1l2 3a2 2 0 0 0-.3 2Z"/></svg><span>Settings</span></a></nav>
+      <div class="sidebar-bottom"><div class="support-card"><span class="support-icon">?</span><span><strong>Need a hand?</strong><small>Visit our help center</small></span><span class="support-arrow">↗</span></div><a class="profile-button sidebar-profile" href="login.html"><span class="profile-avatar">TV</span><span class="profile-copy"><strong>Signed out</strong><small>Sign in to view account</small></span></a></div>
+    </aside>
+    <div class="sidebar-backdrop" data-sidebar-close></div>
+    <div class="dashboard-content">
+      <header class="dashboard-topbar"><button class="icon-button sidebar-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="dashboard-sidebar"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button><label class="global-search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m16 16 4 4"/></svg><input type="search" placeholder="Search documents, users, or actions..." aria-label="Search workspace"></label><div class="topbar-actions"><button class="icon-button notification-button" type="button" aria-label="Notifications"><svg viewBox="0 0 24 24"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg><i></i></button><span class="topbar-divider"></span><a class="profile-button topbar-profile" href="login.html"><span class="profile-avatar">JD</span><span class="profile-copy"><strong>Signed out</strong><small>Account</small></span></a></div></header>
+      <main class="dashboard-main screen-main">
+        <div class="dashboard-heading screen-heading"><div><div class="breadcrumb"><a href="dashboard.html">Workspace</a><span>/</span><strong>My Documents</strong></div><h1>My Documents</h1><p>Find and organize your files in one place.</p></div><button class="button button-primary dashboard-upload-link" type="button" data-open-upload><svg viewBox="0 0 24 24"><path d="M12 16V4m-4 4 4-4 4 4M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg> Upload document</button></div>
+        <section class="panel upload-panel" id="upload-panel" aria-labelledby="upload-title"><div class="upload-panel-copy"><span class="upload-icon"><svg viewBox="0 0 24 24"><path d="M12 16V4m-4 4 4-4 4 4M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg></span><span><h2 id="upload-title">Add a document</h2><p>Choose a file to upload to your private vault.</p></span></div><label class="drop-zone" data-drop-zone><input type="file" data-file-input aria-label="Choose a document file" accept=".csv,.doc,.docx,.jpg,.jpeg,.pdf,.png,.txt,.xls,.xlsx"><strong>Drop a file here, or <span>browse</span></strong><small>PDF, DOCX, XLSX, PNG or JPG · up to 25 MB</small><span class="selected-file" data-selected-file aria-live="polite">No file selected</span></label><div><button class="button button-primary" type="button" data-upload-submit disabled>Upload document</button><p class="upload-preview-note" role="status" aria-live="polite" data-upload-status></p></div></section>
+        <section class="panel files-panel" aria-labelledby="documents-title">
+          <div class="panel-heading files-panel-heading"><div><h2 id="documents-title">All documents <span class="count-pill" data-document-total>—</span></h2><p>Your private workspace files.</p></div><div class="document-toolbar"><label class="table-search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m16 16 4 4"/></svg><input type="search" placeholder="Search documents..." aria-label="Search documents" data-document-search></label><label class="table-search"><input type="search" placeholder="Filter by owner..." aria-label="Filter by owner" data-document-owner></label><label class="select-filter"><span class="visually-hidden">Filter by file type</span><select data-document-type><option value="all">All types</option><option>PDF</option><option>DOC</option><option>DOCX</option><option>XLS</option><option>XLSX</option><option>PNG</option><option>JPG</option><option>CSV</option><option>TXT</option></select></label><label class="select-filter"><span class="visually-hidden">Filter by date</span><select data-document-date><option value="all">Any date</option><option value="today">Today</option><option value="week">This week</option></select></label></div></div>
+          <div class="table-scroll"><table class="documents-table full-documents-table"><thead><tr><th>Name</th><th>Type</th><th>Size</th><th>Modified</th><th>Owner</th><th>Actions</th></tr></thead>
+            <tbody data-document-rows><tr><td colspan="6" data-document-state>Loading documents…</td></tr></tbody></table></div>
+          <div class="table-summary"><span data-document-count role="status" aria-live="polite">Loading documents…</span><nav class="pagination" aria-label="Document pages" hidden><button disabled aria-label="Previous page">‹</button><button class="current-page" aria-current="page">1</button><button disabled aria-label="Next page">›</button></nav></div>
+        </section>
+        <footer class="dashboard-footer"><span>© 2025 TrustVault</span><span><span class="footer-status"></span> Preview workspace</span><a href="landing.html">About TrustVault</a></footer>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

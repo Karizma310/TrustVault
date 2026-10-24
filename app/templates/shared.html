@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f9ff">
+  <title>Shared With Me — TrustVault</title>
+  <link rel="stylesheet" href="../static/css/trustvault.css">
+  <script src="../static/js/trustvault.js" defer></script>
+</head>
+<body class="dashboard-page">
+  <div class="dashboard-layout" data-authenticated-page hidden>
+    <aside class="sidebar" id="dashboard-sidebar">
+      <a class="brand sidebar-brand" href="landing.html" aria-label="TrustVault home"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2.8 27 7v8.2c0 7.1-4.6 11.5-11 14-6.4-2.5-11-6.9-11-14V7l11-4.2Z" fill="currentColor"/><path d="m11.1 15.6 3.2 3.2 6.9-7.2" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/></svg><span>Trust<span class="brand-accent">Vault</span></span></a>
+      <div class="sidebar-label">WORKSPACE</div>
+      <nav class="side-nav" aria-label="Workspace navigation">
+        <a class="side-nav-link" href="landing.html"><svg viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-6v-7h-4v7H4a1 1 0 0 1-1-1V10Z"/></svg><span>Home</span></a>
+        <a class="side-nav-link" href="dashboard.html"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="5" rx="2"/><rect x="13" y="10" width="8" height="11" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/></svg><span>Dashboard</span></a>
+        <a class="side-nav-link" href="documents.html"><svg viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8"/></svg><span>My Documents</span></a>
+        <a class="side-nav-link active" href="shared.html" aria-current="page"><svg viewBox="0 0 24 24"><path d="M16 20v-1.5a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4V20M10 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7ZM16 11l2 2 4-4"/></svg><span>Shared With Me</span></a>
+        <a class="side-nav-link" href="documents.html#upload-panel"><svg viewBox="0 0 24 24"><path d="M12 3 20 6v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-3ZM12 8v8m-4-4h8"/></svg><span>Upload Document</span></a>
+        <a class="side-nav-link" href="permissions.html"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20v-1a6 6 0 0 1 12 0v1M16 11h5"/></svg><span>Permissions</span></a>
+        <a class="side-nav-link" href="audit.html"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Audit Logs</span></a>
+      </nav>
+      <div class="sidebar-label sidebar-label-lower">PREFERENCES</div>
+      <nav class="side-nav" aria-label="Account navigation"><a class="side-nav-link" href="settings.html"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="m19 15 1 2-2 3-2-.3H8L6 20l-2-3 1-2V9L4 7l-2-3 2-.3h12l2 .3 2 3-1 2Z"/></svg><span>Settings</span></a></nav>
+      <div class="sidebar-bottom"><div class="support-card"><span class="support-icon">?</span><span><strong>Need a hand?</strong><small>Visit our help center</small></span><span class="support-arrow">↗</span></div><a class="profile-button sidebar-profile" href="login.html"><span class="profile-avatar">TV</span><span class="profile-copy"><strong>Signed out</strong><small>Sign in to view account</small></span></a></div>
+    </aside>
+    <div class="sidebar-backdrop" data-sidebar-close></div>
+    <div class="dashboard-content">
+      <header class="dashboard-topbar"><button class="icon-button sidebar-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="dashboard-sidebar"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button><label class="global-search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m16 16 4 4"/></svg><input type="search" placeholder="Search documents, users, or actions..." aria-label="Search workspace"></label><div class="topbar-actions"><button class="icon-button notification-button" type="button" aria-label="Notifications"><svg viewBox="0 0 24 24"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg><i></i></button><span class="topbar-divider"></span><a class="profile-button topbar-profile" href="login.html"><span class="profile-avatar">JD</span><span class="profile-copy"><strong>Signed out</strong><small>Account</small></span></a></div></header>
+      <main class="dashboard-main screen-main">
+        <div class="dashboard-heading screen-heading"><div><div class="breadcrumb"><a href="dashboard.html">Workspace</a><span>/</span><strong>Shared With Me</strong></div><h1>Shared With Me</h1><p>Documents others have shared with you.</p></div></div>
+        <section class="panel files-panel" aria-labelledby="shared-title">
+          <div class="panel-heading files-panel-heading"><div><h2 id="shared-title">Shared documents <span class="count-pill" data-shared-total>—</span></h2><p>Documents shared with your account.</p></div><label class="table-search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m16 16 4 4"/></svg><input type="search" placeholder="Search shared documents..." aria-label="Search shared documents" data-shared-search></label></div>
+          <div class="table-scroll"><table class="documents-table full-documents-table"><thead><tr><th>Name</th><th>Owner</th><th>Access</th><th>Added</th><th><span class="visually-hidden">Actions</span></th></tr></thead><tbody data-shared-rows><tr><td colspan="5">Loading shared documents…</td></tr></tbody></table></div>
+          <div class="table-summary"><span data-shared-count role="status" aria-live="polite">Loading shared documents…</span></div>
+        </section>
+        <p class="screen-disclaimer" role="status" aria-live="polite" data-shared-status></p>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

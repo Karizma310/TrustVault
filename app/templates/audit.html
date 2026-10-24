@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f9ff">
+  <title>Audit Logs — TrustVault</title>
+  <link rel="stylesheet" href="../static/css/trustvault.css">
+  <script src="../static/js/trustvault.js" defer></script>
+</head>
+<body class="dashboard-page">
+  <div class="dashboard-layout" data-authenticated-page hidden>
+    <aside class="sidebar" id="dashboard-sidebar">
+      <a class="brand sidebar-brand" href="landing.html" aria-label="TrustVault home"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2.8 27 7v8.2c0 7.1-4.6 11.5-11 14-6.4-2.5-11-6.9-11-14V7l11-4.2Z" fill="currentColor"/><path d="m11.1 15.6 3.2 3.2 6.9-7.2" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/></svg><span>Trust<span class="brand-accent">Vault</span></span></a>
+      <div class="sidebar-label">WORKSPACE</div>
+      <nav class="side-nav" aria-label="Workspace navigation">
+        <a class="side-nav-link" href="landing.html"><svg viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-6v-7h-4v7H4a1 1 0 0 1-1-1V10Z"/></svg><span>Home</span></a>
+        <a class="side-nav-link" href="dashboard.html"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="5" rx="2"/><rect x="13" y="10" width="8" height="11" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/></svg><span>Dashboard</span></a>
+        <a class="side-nav-link" href="documents.html"><svg viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8"/></svg><span>My Documents</span></a>
+        <a class="side-nav-link" href="shared.html"><svg viewBox="0 0 24 24"><path d="M16 20v-1.5a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4V20M10 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"/></svg><span>Shared With Me</span></a>
+        <a class="side-nav-link" href="documents.html#upload-panel"><svg viewBox="0 0 24 24"><path d="M12 3 20 6v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-3Z"/><path d="M12 8v8"/></svg><span>Upload Document</span></a>
+        <a class="side-nav-link" href="permissions.html"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20v-1a6 6 0 0 1 12 0v1M16 11h5"/></svg><span>Permissions</span></a>
+        <a class="side-nav-link active" href="audit.html" aria-current="page"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Audit Logs</span></a>
+      </nav>
+      <div class="sidebar-label sidebar-label-lower">PREFERENCES</div>
+      <nav class="side-nav" aria-label="Account navigation"><a class="side-nav-link" href="settings.html"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="m19 15 1 2-2 3-2-.3H8L6 20l-2-3 1-2V9L4 7l2-3 2 .3h8l2-.3 2 3-1 2Z"/></svg><span>Settings</span></a></nav>
+      <div class="sidebar-bottom"><div class="support-card"><span class="support-icon">?</span><span><strong>Need a hand?</strong><small>Visit our help center</small></span><span class="support-arrow">↗</span></div><a class="profile-button sidebar-profile" href="login.html"><span class="profile-avatar">TV</span><span class="profile-copy"><strong>Signed out</strong><small>Sign in to view account</small></span></a></div>
+    </aside>
+    <div class="sidebar-backdrop" data-sidebar-close></div>
+    <div class="dashboard-content">
+      <header class="dashboard-topbar"><button class="icon-button sidebar-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="dashboard-sidebar"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button><label class="global-search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m16 16 4 4"/></svg><input type="search" placeholder="Search documents, users, or actions..." aria-label="Search workspace"></label><div class="topbar-actions"><button class="icon-button notification-button" type="button" aria-label="Notifications"><svg viewBox="0 0 24 24"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg><i></i></button><span class="topbar-divider"></span><a class="profile-button topbar-profile" href="login.html"><span class="profile-avatar">JD</span><span class="profile-copy"><strong>Signed out</strong><small>Account</small></span></a></div></header>
+      <main class="dashboard-main screen-main">
+        <div class="dashboard-heading screen-heading"><div><div class="breadcrumb"><a href="dashboard.html">Workspace</a><span>/</span><strong>Audit Logs</strong></div><h1>Audit Logs</h1><p>Review activity recorded for your account.</p></div><button class="button button-secondary export-button" type="button" data-audit-export><svg viewBox="0 0 24 24"><path d="M12 4v11m-4-4 4 4 4-4M4 18v2h16v-2"/></svg> Export logs</button></div>
+        <section class="audit-summary-grid" aria-label="Activity summary">
+          <article class="metric-card audit-summary-card"><div class="metric-top"><span>Events this week</span><span class="metric-icon metric-blue"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span></div><div class="metric-number" data-audit-week-count>—</div><div class="metric-foot">Your account activity</div></article>
+          <article class="metric-card audit-summary-card"><div class="metric-top"><span>Signed-in account</span><span class="metric-icon metric-lilac"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20v-1a6 6 0 0 1 12 0v1"/></svg></span></div><div class="metric-number audit-account" data-audit-account>—</div><div class="metric-foot">Events are user-scoped</div></article>
+          <article class="metric-card audit-summary-card"><div class="metric-top"><span>Documents referenced</span><span class="metric-icon metric-mint"><svg viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9zM14 3v6h6"/></svg></span></div><div class="metric-number" data-audit-document-count>—</div><div class="metric-foot">In the available events</div></article>
+        </section>
+        <section class="panel audit-panel" aria-labelledby="audit-activity-title">
+          <div class="panel-heading audit-panel-heading"><div><h2 id="audit-activity-title">Activity history</h2><p>Showing events recorded by the API for your signed-in account.</p></div><span class="audit-live-status"><span class="footer-status"></span><span data-audit-status>Loading events…</span></span></div>
+          <div class="audit-filters">
+            <label class="table-search audit-search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m16 16 4 4"/></svg><input type="search" placeholder="Search activity..." aria-label="Search audit activity" data-audit-search></label>
+            <label class="select-filter"><span class="visually-hidden">Filter by action</span><select data-audit-action><option value="all">All actions</option><option value="user_registered">Registered</option><option value="user_logged_in">Signed in</option><option value="admin_role_changed">Admin role changed</option><option value="document_uploaded">Uploaded</option><option value="document_upload_denied">Upload denied</option><option value="document_listed">Documents viewed</option><option value="shared_documents_listed">Shared documents viewed</option><option value="document_downloaded">Downloaded</option><option value="document_download_failed">Download failed</option><option value="document_access_denied">Access denied</option><option value="document_edited">Edited</option><option value="document_edit_denied">Edit denied</option><option value="document_deleted">Deleted</option><option value="document_delete_denied">Delete denied</option><option value="document_permissions_listed">Permissions viewed</option><option value="document_permissions_read_denied">Permission list denied</option><option value="document_access_granted">Access granted</option><option value="document_access_grant_denied">Share denied</option><option value="document_access_revoked">Access revoked</option><option value="document_access_revoke_denied">Revoke denied</option></select></label>
+            <label class="select-filter"><span class="visually-hidden">Audit user scope</span><select data-audit-user disabled><option value="all">Signed-in user only</option></select></label>
+            <label class="date-filter"><span>From</span><input type="date" aria-label="Filter events from date" data-audit-from></label>
+            <label class="date-filter"><span>To</span><input type="date" aria-label="Filter events to date" data-audit-to></label>
+            <button class="clear-filters" type="button" data-clear-audit>Clear filters</button>
+          </div>
+          <div class="table-scroll"><table class="documents-table audit-table"><thead><tr><th>User</th><th>Action</th><th>Resource</th><th>Date &amp; time</th><th>Details</th></tr></thead><tbody data-audit-rows><tr><td colspan="5">Loading audit events…</td></tr></tbody></table></div>
+          <div class="table-summary"><span data-audit-count role="status" aria-live="polite">Loading audit events…</span></div>
+        </section>
+        <p class="audit-disclaimer" role="status" aria-live="polite" data-audit-error><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5m0-8h.01"/></svg><span></span></p>
+        <footer class="dashboard-footer"><span>© 2025 TrustVault</span><span><span class="footer-status"></span> API connected</span><a href="landing.html">About TrustVault</a></footer>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
