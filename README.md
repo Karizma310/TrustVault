@@ -126,8 +126,3 @@ The implemented deployment path uses the Dockerfile and Docker Compose: the API 
 - SQLite audit immutability triggers are installed only for SQLite. PostgreSQL audit rows are protected by application access controls, not a database append-only trigger.
 - Logout records an event and clears the browser token, but a copied stateless bearer token remains usable until expiry. Add server-side revocation if immediate invalidation is required.
 - Real Google OAuth and SMTP delivery need provider testing; automated tests mock these external services.
-
-No deployment has been performed.
-
-## Author
-[Your Name]
