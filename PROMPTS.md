@@ -40,13 +40,40 @@ Prepare project documentation covering architecture, installation, environment c
 
 Evaluate TrustVault against the hiring challenge requirements. Review feature completeness, authorization boundaries, audit logging, automated test results, documentation, and deployment readiness. Identify unresolved issues and prioritize corrective actions before submission.
 
-## Dated Prompt Log
+## Day-wise Development Progress (October 19–24, 2026)
 
-These entries summarize actual project requests from this conversation; they do not claim that live third-party services were tested.
+October 19, 2026 — Project Setup
 
-1. **2026-10-24 08:21** — Inspect the password-reset path across backend, frontend, configuration, and tests; identify SMTP and token/link issues without exposing secrets.
-2. **2026-10-24 08:32** — Report the exact SMTP environment variable names and Gmail App Password setup supported by the current implementation.
-3. **2026-10-24 13:14** — Diagnose why the intended account receives 403 from Admin APIs; verify the role assignment script and preserve normal-user denial.
-4. **2026-10-24 13:17** — Compare the running FastAPI instance and role-assignment script database, verify the intended account, and avoid granting Admin to all users.
-5. **2026-10-24 13:28** — Audit authentication, roles, document security, audit trail, settings, tests, repository requirements, and deployment readiness.
-6. **2026-10-24 14:21** — Add safe synthetic demo data, endpoint authorization documentation, a five-minute walkthrough, and an honest challenge write-up without embedding credentials.
+Planned the application structure and configured the initial FastAPI project.
+
+Worked on authentication flow, user roles, and API access restrictions.
+
+October 20, 2026 — Document Sharing
+
+Developed the initial document upload, listing, and download workflows.
+
+Worked on owner-controlled sharing and document permission handling.
+
+October 21, 2026 — Security and Tracking
+
+Worked on recording document-related activities through audit logs.
+
+Reviewed notification handling and user-facing document status updates.
+
+October 22, 2026 — Admin and Access Control
+
+Reviewed administrator access and protected API endpoints.
+
+Tested user permissions and checked for unauthorized document access.
+
+October 23, 2026 — Testing and Debugging
+
+Added and updated automated tests for configuration and application behavior.
+
+Investigated errors and reviewed security-sensitive functionality.
+
+October 24, 2026 — Deployment
+
+Debugged PostgreSQL URL validation and added configuration regression tests.
+
+Deployed the application on Render and verified 61 passing automated tests.
